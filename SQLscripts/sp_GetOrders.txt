@@ -1,0 +1,16 @@
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[sp_GetClientOrders] 
+
+	@Client_id int,
+	@Department_address varchar(60)
+AS
+BEGIN
+ SELECT [Orders].amount, [Orders].currency, [Statuses].status FROM [dbo].[Orders] 
+ INNER JOIN [Statuses] ON [Orders].status_id = [Statuses].id
+ WHERE	[Orders].client_id = @Client_id AND [Orders].department_address = @Department_address
+END
+GO

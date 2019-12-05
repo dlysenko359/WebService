@@ -1,0 +1,21 @@
+CREATE TABLE Clients(
+	id int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	firstName varchar(20) NOT NULL,
+	lastName varchar(20) NOT NULL,
+	address varchar(20) NOT NULL
+);
+
+CREATE TABLE Statuses(
+	id int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	status varchar(20) NOT NULL,
+);
+
+CREATE TABLE Orders(
+	id int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	department_address varchar(60) NOT NULL, 
+	amount decimal(10,2) NOT NULL, 
+	currency  varchar(10) NOT NULL, 
+	client_id int NOT NULL FOREIGN KEY REFERENCES Clients(id),
+	client_ip varchar(20) NOT NULL, 
+	status_id int NOT NULL FOREIGN KEY REFERENCES Statuses(id)
+);

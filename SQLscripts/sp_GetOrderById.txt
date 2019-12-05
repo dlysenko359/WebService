@@ -1,0 +1,15 @@
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[sp_GetOrderById] 
+
+	@Id int
+AS
+BEGIN
+ SELECT [Orders].amount, [Orders].currency, [Statuses].status FROM [dbo].[Orders] 
+ INNER JOIN [Statuses] ON [Orders].status_id = [Statuses].id
+ WHERE	[Orders].id = @Id
+END
+GO

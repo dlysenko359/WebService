@@ -1,0 +1,28 @@
+USE [TestDB]
+GO
+
+/****** Object:  StoredProcedure [dbo].[sp_PostOrder]    Script Date: 04.12.2019 2:04:03 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[sp_PostOrder]
+    @Id         int output,  
+    @Department_address  varchar(60),  
+    @Amount  decimal(10,2),      
+    @Currency    varchar(10),  
+    @Client_id      int,  
+    @Client_ip      varchar(20),
+    @Status      int  
+AS  
+BEGIN  
+INSERT INTO [dbo].[Orders]  
+           ([department_address],[amount],[currency],[client_id],[client_ip], [status_id] ) VALUES  
+           (@Department_address, @Amount, @Currency, @Client_id, @Client_ip, @Status);  
+        SET @Id = cast(scope_identity() as int)
+END;  
+GO
+
+
