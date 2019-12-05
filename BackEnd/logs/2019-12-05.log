@@ -1,0 +1,12 @@
+2019-12-05 04:42:27.5243 | INFO | BackEnd.Controllers.HomeController | {"Department_address":"Peredovaya.100", "Amount":100, "Currency":"USD", "Client_id":2, "Client_ip":"::1", "Status":"ReadyForExtradition"}
+2019-12-05 04:43:18.0034 | INFO | BackEnd.Controllers.HomeController | {"Department_address":"Peredovaya.100", "Amount":100, "Currency":"USD", "Client_id":5, "Client_ip":"::1", "Status":"ReadyForExtradition"}
+2019-12-05 04:43:18.0554 | ERROR | BackEnd.Controllers.HomeController | Конфликт инструкции INSERT с ограничением FOREIGN KEY "FK__Orders__client_i__0D7A0286". Конфликт произошел в базе данных "TestDB", таблица "dbo.Clients", column 'id'.
+Выполнение данной инструкции было прервано.
+2019-12-05 04:43:58.7639 | INFO | BackEnd.Controllers.HomeController | {"Order_id":1, "Client_ip":"::1"}
+2019-12-05 04:44:29.2444 | INFO | BackEnd.Controllers.HomeController | {"Order_id":2, "Client_ip":"::1"}
+2019-12-05 04:44:59.6531 | INFO | BackEnd.Controllers.HomeController | {"Order_id":200, "Client_ip":"::1"}
+2019-12-05 04:45:35.9061 | INFO | BackEnd.Controllers.HomeController | {"Client_id":3, "Department_address":"Pobedi.101", "Client_ip":"::1"}
+2019-12-05 04:46:08.8466 | INFO | BackEnd.Controllers.HomeController | {"Client_id":3, "Department_address":"Pobedi.100", "Client_ip":"::1"}
+2019-12-05 04:46:34.6124 | INFO | BackEnd.Controllers.HomeController | {"Client_id":2, "Department_address":"Pobedi.100", "Client_ip":"::1"}
+2019-12-05 04:47:13.5045 | INFO | BackEnd.Controllers.HomeController | {"Client_id":2, "Department_address":"Peredovaya.100", "Client_ip":"::1"}
+2019-12-05 04:47:54.7614 | INFO | BackEnd.Controllers.HomeController | {"Client_id":4, "Department_address":"Peredovaya.100", "Client_ip":"::1"}
