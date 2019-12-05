@@ -1,0 +1,16 @@
+2019-11-29 18:00:12.3667 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":3, "Department_address":"address", "Amount":1000, "Currency":"UAH", "Client_ip":"::1"}
+2019-11-29 18:01:30.9368 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":3, "Department_address":"address", "Amount":1000, "Currency":"UAH", "Client_ip":"::1"}
+2019-11-29 18:09:39.2482 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":3, "Department_address":"address", "Amount":1000, "Currency":"UAH", "Client_ip":"::1"}
+2019-11-29 18:13:31.8469 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":3, "Department_address":"address", "Amount":1000, "Currency":"UAH", "Client_ip":"::1"}
+2019-11-29 18:14:50.2412 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":3, "Department_address":"address", "Amount":1000, "Currency":"UAH", "Client_ip":"::1"}
+2019-11-29 18:16:31.4997 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":3, "Department_address":"address", "Amount":1000, "Currency":"UAH", "Client_ip":"::1"}
+2019-11-29 18:20:54.2602 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":3, "Department_address":"address", "Amount":1000, "Currency":"UAH", "Client_ip":"::1"}
+2019-11-29 18:37:31.6540 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":3, "Department_address":"address", "Amount":1000, "Currency":"UAH", "Client_ip":"::1"}
+2019-11-29 18:37:42.1669 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":3, "Department_address":"address", "Amount":1000, "Currency":"UAH", "Client_ip":"::1"}
+2019-11-29 18:37:43.6075 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":3, "Department_address":"address", "Amount":1000, "Currency":"UAH", "Client_ip":"::1"}
+2019-11-29 18:39:30.8463 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":3, "Department_address":"address", "Amount":1000, "Currency":"UAH", "Client_ip":"::1"}
+2019-11-29 18:40:57.3644 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":3, "Department_address":"address", "Amount":1000, "Currency":"UAH", "Client_ip":"::1"}
+2019-11-29 18:44:12.9456 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":3, "Department_address":"address", "Amount":1000, "Currency":"UAH", "Client_ip":"::1"}
+2019-11-29 18:44:51.4693 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":3, "Department_address":"address", "Amount":1000, "Currency":"UAH", "Client_ip":"::1"}
+2019-11-29 18:45:51.3341 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":3, "Department_address":"address", "Amount":1000, "Currency":"UAH", "Client_ip":"::1"}
+2019-11-29 18:46:52.8884 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":3, "Department_address":"address", "Amount":1000, "Currency":"UAH", "Client_ip":"::1"}

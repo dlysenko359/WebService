@@ -1,0 +1,10 @@
+2019-11-27 21:14:23.5350 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":4, "Department_address":"Gilarovskogo", "Amount":50.5, "Currency":"uah", "Client_ip":"::1"}
+2019-11-27 22:01:28.0787 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":4, "Department_address":"Gilarovskogo", "Amount":50.5, "Currency":"uah", "Client_ip":"::1"}
+2019-11-27 22:01:39.0004 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":4, "Department_address":"Gilarovskogo", "Amount":50.5, "Client_ip":"::1"}
+2019-11-27 22:38:31.3611 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":4, "Department_address":"Gilarovskogo", "Amount":50.5, "Client_ip":"::1"}
+2019-11-27 22:39:05.2137 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":4, "Department_address":"Gilarovskogo", "Amount":50.5, "Client_ip":"::1"}
+2019-11-27 22:39:12.8651 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":4, "Department_address":"Gilarovskogo", "Amount":50.5, "Currency":"uah", "Client_ip":"::1"}
+2019-11-27 22:39:51.4822 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":4, "Department_address":"Gilarovskogo", "Amount":50.5, "Currency":"uah", "Client_ip":"::1"}
+2019-11-27 22:39:52.8238 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":4, "Department_address":"Gilarovskogo", "Amount":50.5, "Currency":"uah", "Client_ip":"::1"}
+2019-11-27 22:39:59.4412 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":4, "Department_address":"Gilarovskogo", "Amount":50.5, "Currency":"uahertreter", "Client_ip":"::1"}
+2019-11-27 22:40:02.8395 | INFO | WebApi.Controllers.ClientRequestController | {"Client_id":4, "Department_address":"Gilarovskogo", "Amount":50.5, "Currency":"uah", "Client_ip":"::1"}

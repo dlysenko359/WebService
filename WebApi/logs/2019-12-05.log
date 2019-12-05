@@ -1,0 +1,12 @@
+2019-12-05 04:39:23.0212 | INFO | WebApi.Controllers.ClientOrderController | {"Client_id":2, "Department_address":"Peredovaya.100", "Amount":100, "Currency":"USD", "Client_ip":"::1"}
+2019-12-05 04:42:24.3784 | INFO | WebApi.Controllers.ClientOrderController | {"Client_id":2, "Department_address":"Peredovaya.100", "Amount":100, "Currency":"USD", "Client_ip":"::1"}
+2019-12-05 04:43:15.8316 | INFO | WebApi.Controllers.ClientOrderController | {"Client_id":5, "Department_address":"Peredovaya.100", "Amount":100, "Currency":"USD", "Client_ip":"::1"}
+2019-12-05 04:43:23.8302 | ERROR | WebApi.Controllers.ClientOrderController | Произошло исключение при обработке HTTP-запроса. Дополнительные сведения см. в HTTP-ответе, возвращаемом свойством "Response" этого исключения.
+2019-12-05 04:43:57.8789 | INFO | WebApi.Controllers.ClientOrderController | {"Order_id":1, "Client_ip":"::1"}
+2019-12-05 04:44:26.8149 | INFO | WebApi.Controllers.ClientOrderController | {"Order_id":2, "Client_ip":"::1"}
+2019-12-05 04:44:58.1950 | INFO | WebApi.Controllers.ClientOrderController | {"Order_id":200, "Client_ip":"::1"}
+2019-12-05 04:45:35.0050 | INFO | WebApi.Controllers.ClientOrderController | {"Client_id":3, "Department_address":"Pobedi.101", "Client_ip":"::1"}
+2019-12-05 04:46:05.3557 | INFO | WebApi.Controllers.ClientOrderController | {"Client_id":3, "Department_address":"Pobedi.100", "Client_ip":"::1"}
+2019-12-05 04:46:31.5461 | INFO | WebApi.Controllers.ClientOrderController | {"Client_id":2, "Department_address":"Pobedi.100", "Client_ip":"::1"}
+2019-12-05 04:47:10.7936 | INFO | WebApi.Controllers.ClientOrderController | {"Client_id":2, "Department_address":"Peredovaya.100", "Client_ip":"::1"}
+2019-12-05 04:47:51.4253 | INFO | WebApi.Controllers.ClientOrderController | {"Client_id":4, "Department_address":"Peredovaya.100", "Client_ip":"::1"}
