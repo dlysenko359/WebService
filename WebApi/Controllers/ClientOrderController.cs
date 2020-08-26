@@ -5,13 +5,12 @@ using System.Web;
 using System.Web.Http;
 using NLog;
 using WebApi.Models;
-using RabbitMQ.Client;
-using System.Text;
 using Newtonsoft.Json;
 using System;
 using System.Threading.Tasks;
 using WebApi.Filters;
 using System.Net;
+using WebApi.Common;
 
 namespace WebApi.Controllers
 {
@@ -19,14 +18,8 @@ namespace WebApi.Controllers
     public class ClientOrderController : ApiController
     {
         private Logger logger = LogManager.GetCurrentClassLogger();
-
-        private ConnectionFactory factory = new ConnectionFactory()
-        {
-            HostName = "localhost",
-            Port = 5672,
-            UserName = "guest",
-            Password = "guest",
-        };
+        private Rabbit messageBroker = new Rabbit();
+        private Validator validator = new Validator();
 
         [HttpPost]
         public async Task<IHttpActionResult> PostOrderAsync(HttpRequestMessage request)
@@ -43,15 +36,14 @@ namespace WebApi.Controllers
 
                 LogRequest(clientRequestInfo);
 
-                IsClientOrderValid(clientRequestInfo);
+                validator.IsClientOrderValid(clientRequestInfo);
 
-                SendMassegeToRabbit(JsonConvert.SerializeObject(clientRequestInfo), queue);
+                messageBroker.SendMassegeToRabbit(JsonConvert.SerializeObject(clientRequestInfo), queue);
 
                 var response = await Task.Run(() => PostOrder(queue));
 
-                var requestId = Int32.Parse(response);
 
-                return Ok(requestId);
+                return Ok(Int32.Parse(response));
             }
             catch (Exception ex)
             {
@@ -77,7 +69,7 @@ namespace WebApi.Controllers
 
                 LogRequest(requestInfo);
 
-                SendMassegeToRabbit(JsonConvert.SerializeObject(requestInfo), queue);
+                messageBroker.SendMassegeToRabbit(JsonConvert.SerializeObject(requestInfo), queue);
 
                 var response = JsonConvert.DeserializeObject<OrderModelFromDb>(await Task.Run(() => GetOrder(queue)));
                 if (response == null)
@@ -111,7 +103,7 @@ namespace WebApi.Controllers
 
                 LogRequest(requestInfo);
 
-                SendMassegeToRabbit(JsonConvert.SerializeObject(requestInfo), queue);
+                messageBroker.SendMassegeToRabbit(JsonConvert.SerializeObject(requestInfo), queue);
 
                 var response = JsonConvert.DeserializeObject<List<OrderModelFromDb>>(await Task.Run(() => GetOrders(queue)));
                 if (response.Count == 0)
@@ -152,13 +144,6 @@ namespace WebApi.Controllers
             }
         }
 
-        private void IsClientOrderValid(ClientRequestInfo cri)
-        {
-            if (cri.Client_id < 1 || cri.Amount < 20 || cri.Currency.Length != 3) // cri.Currency.Length always 3 characters (ISO 4217)
-            {
-                throw new FormatException();
-            }
-        }
 
         private async Task<string> GetOrder(string queue)
         {
@@ -222,24 +207,10 @@ namespace WebApi.Controllers
             logger.Error(ex, ex.Message);
         }
 
-        private HttpResponseException CustomException(HttpResponseMessage message)
+        public HttpResponseException CustomException(HttpResponseMessage message)
         {
             return new HttpResponseException(Request.CreateErrorResponse(message.StatusCode, message.ReasonPhrase));
         }
 
-        private void SendMassegeToRabbit(string request, string queue)
-        {
-            using (var connection = factory.CreateConnection())
-            {
-                using (var model = connection.CreateModel())
-                {
-                    model.QueueDeclare(queue, durable: true, exclusive: false, autoDelete: false);
-
-                    var body = Encoding.UTF8.GetBytes(request);
-
-                    model.BasicPublish(exchange: string.Empty, routingKey: queue, body: body);
-                }
-            }
-        }
     }
 }

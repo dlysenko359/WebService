@@ -98,6 +98,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Common\Rabbit.cs" />
+    <Compile Include="Common\Validator.cs" />
     <Compile Include="Controllers\ClientOrderController.cs" />
     <Compile Include="Filters\CustomExceptionFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
